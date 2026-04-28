@@ -1,6 +1,7 @@
-using WinFormsApp2.Services;
+using SecureVault.Forms;
+using SecureVault.Services;
 
-namespace WinFormsApp2
+namespace SecureVault
 {
     static class Program
     {

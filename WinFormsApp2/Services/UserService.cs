@@ -1,7 +1,7 @@
-using WinFormsApp2.Models;
 using System.Text.Json;
+using SecureVault.Models;
 
-namespace WinFormsApp2.Services;
+namespace SecureVault.Services;
 
 public class UserService
 {

@@ -1,4 +1,4 @@
-namespace WinFormsApp2.Models;
+namespace SecureVault.Models;
 
 public class User
 {

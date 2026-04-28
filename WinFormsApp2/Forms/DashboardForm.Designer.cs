@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace SecureVault.Forms
 {
     public partial class DashboardForm
     {

@@ -1,8 +1,7 @@
-using WinFormsApp2.Models;
-using WinFormsApp2.Services;
+using SecureVault.Models;
+using SecureVault.Services;
 
-
-namespace WinFormsApp2;
+namespace SecureVault.Forms;
 
 public partial class DashboardForm : Form
 {

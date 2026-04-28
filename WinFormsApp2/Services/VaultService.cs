@@ -1,7 +1,7 @@
 using System.Text.Json;
-using WinFormsApp2.Models;
+using SecureVault.Models;
 
-namespace WinFormsApp2.Services
+namespace SecureVault.Services
 {
     /// <summary>
     /// Manages the encrypted file vault for a single logged-in user.

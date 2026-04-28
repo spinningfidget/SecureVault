@@ -1,7 +1,7 @@
-using WinFormsApp2.Models;
-using WinFormsApp2.Services;
+using SecureVault.Models;
+using SecureVault.Services;
 
-namespace WinFormsApp2
+namespace SecureVault.Forms
 {
     public partial class LoginForm : Form
     {
@@ -46,7 +46,7 @@ namespace WinFormsApp2
             var user = _userService.Login(txtLoginUsername.Text, txtLoginPassword.Text);
             if (user == null)
             {
-                lblLoginError.Text = "⚠  Invalid username or password.";
+                lblLoginError.Text = "⚠ Invalid username or password.";
                 txtLoginPassword.Clear();
                 return;
             }
