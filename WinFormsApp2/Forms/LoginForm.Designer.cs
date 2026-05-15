@@ -17,286 +17,574 @@
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-
-            // ── Controls declared in designer order ───────────────────────────────
-            this.pnlSide = new Panel();
-            this.pnlLogo = new Panel();
-            this.lblLogo = new Label();
-            this.lblAppTitle = new Label();
-            this.pnlBullets = new Panel();
-            this.pnlBullet1 = new Panel();
-            this.lblBullet1Icon = new Label();
-            this.lblBullet1Head = new Label();
-            this.lblBullet1Sub = new Label();
-            this.pnlBullet2 = new Panel();
-            this.lblBullet2Icon = new Label();
-            this.lblBullet2Head = new Label();
-            this.lblBullet2Sub = new Label();
-            this.pnlBullet3 = new Panel();
-            this.lblBullet3Icon = new Label();
-            this.lblBullet3Head = new Label();
-            this.lblBullet3Sub = new Label();
-            this.pnlBullet4 = new Panel();
-            this.lblBullet4Icon = new Label();
-            this.lblBullet4Head = new Label();
-            this.lblBullet4Sub = new Label();
-            this.pnlMain = new Panel();
-            this.tabControl = new TabControl();
-            this.tabLogin = new TabPage();
-            this.pnlLoginInner = new Panel();
-            this.lblLoginTitle = new Label();
-            this.lblLoginSub = new Label();
-            this.lblLoginUsername = new Label();
-            this.txtLoginUsername = new TextBox();
-            this.lblLoginPassword = new Label();
-            this.txtLoginPassword = new TextBox();
-            this.lblLoginError = new Label();
-            this.btnLogin = new Button();
-            this.lblLoginHint = new Label();
-            this.tabRegister = new TabPage();
-            this.pnlRegInner = new Panel();
-            this.lblRegTitle = new Label();
-            this.lblRegSub = new Label();
-            this.lblRegUsername = new Label();
-            this.txtRegUsername = new TextBox();
-            this.lblRegEmail = new Label();
-            this.txtRegEmail = new TextBox();
-            this.lblRegPassword = new Label();
-            this.txtRegPassword = new TextBox();
-            this.lblRegConfirm = new Label();
-            this.txtRegConfirm = new TextBox();
-            this.lblRegError = new Label();
-            this.lblRegSuccess = new Label();
-            this.btnRegister = new Button();
-
-            this.SuspendLayout();
-
-            // ════════════════════════════════════════════════════════════════════
-            // Form
-            // ════════════════════════════════════════════════════════════════════
-            this.Text = "SecureVault — Secure File Storage";
-            this.ClientSize = new Size(900, 620);
-            this.MinimumSize = new Size(900, 620);
-            this.MaximumSize = new Size(900, 620);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.FromArgb(15, 17, 26);
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-
-            // ════════════════════════════════════════════════════════════════════
-            // Side panel
-            // ════════════════════════════════════════════════════════════════════
-            this.pnlSide.Dock = DockStyle.Left;
-            this.pnlSide.Width = 320;
-            this.pnlSide.BackColor = Color.FromArgb(20, 22, 35);
-
-            // Logo sub-panel
-            this.pnlLogo.Dock = DockStyle.Top;
-            this.pnlLogo.Height = 180;
-            this.pnlLogo.BackColor = Color.FromArgb(30, 34, 54);
-
-            this.lblLogo.Text = "🔐";
-            this.lblLogo.Font = new Font("Segoe UI Emoji", 42);
-            this.lblLogo.ForeColor = Color.White;
-            this.lblLogo.AutoSize = false;
-            this.lblLogo.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblLogo.Dock = DockStyle.Top;
-            this.lblLogo.Height = 100;
-
-            this.lblAppTitle.Text = "SecureVault";
-            this.lblAppTitle.Font = new Font("Segoe UI", 22, FontStyle.Bold);
-            this.lblAppTitle.ForeColor = Color.FromArgb(99, 179, 237);
-            this.lblAppTitle.AutoSize = false;
-            this.lblAppTitle.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblAppTitle.Dock = DockStyle.Fill;
-
-            this.pnlLogo.Controls.Add(this.lblAppTitle);
-            this.pnlLogo.Controls.Add(this.lblLogo);
-
-            // Bullets panel
-            this.pnlBullets.Dock = DockStyle.Fill;
-            this.pnlBullets.Padding = new Padding(24, 20, 24, 0);
-
-            BuildBulletRow(this.pnlBullet1, this.lblBullet1Icon, this.lblBullet1Head, this.lblBullet1Sub,
-                0, "🔒", "AES-256 Encryption", "EU GDPR & NIS2 Compliant");
-            BuildBulletRow(this.pnlBullet2, this.lblBullet2Icon, this.lblBullet2Head, this.lblBullet2Sub,
-                64, "🛡️", "PBKDF2-SHA512 Hashing", "310,000 Iterations");
-            BuildBulletRow(this.pnlBullet3, this.lblBullet3Icon, this.lblBullet3Head, this.lblBullet3Sub,
-                128, "📁", "Per-User Secure Vault", "Isolated Encrypted Storage");
-            BuildBulletRow(this.pnlBullet4, this.lblBullet4Icon, this.lblBullet4Head, this.lblBullet4Sub,
-                192, "✅", "Authenticate-then-Decrypt", "Tamper Detection Built-in");
-
-            this.pnlBullets.Controls.AddRange(new Control[]
-            {
-            this.pnlBullet1, this.pnlBullet2, this.pnlBullet3, this.pnlBullet4
-            });
-
-            this.pnlSide.Controls.Add(this.pnlBullets);
-            this.pnlSide.Controls.Add(this.pnlLogo);
-
-            // ════════════════════════════════════════════════════════════════════
-            // Main panel + TabControl
-            // ════════════════════════════════════════════════════════════════════
-            this.pnlMain.Dock = DockStyle.Fill;
-            this.pnlMain.BackColor = Color.FromArgb(15, 17, 26);
-            this.pnlMain.Padding = new Padding(40, 40, 40, 40);
-
-            this.tabControl.Dock = DockStyle.Fill;
-            this.tabControl.Font = new Font("Segoe UI", 10);
-            this.tabControl.Appearance = TabAppearance.FlatButtons;
-            this.tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
-            this.tabControl.ItemSize = new Size(130, 36);
-            this.tabControl.DrawItem += this.tabControl_DrawItem;
-
-            // ── Login Tab ────────────────────────────────────────────────────────
-            this.tabLogin.Text = "  Sign In  ";
-            this.tabLogin.BackColor = Color.FromArgb(15, 17, 26);
-
-            this.pnlLoginInner.Dock = DockStyle.Fill;
-            this.pnlLoginInner.Padding = new Padding(30, 20, 30, 20);
-
-            this.lblLoginTitle.Text = "Welcome back";
-            this.lblLoginTitle.Font = new Font("Segoe UI", 18, FontStyle.Bold);
-            this.lblLoginTitle.ForeColor = Color.White;
-            this.lblLoginTitle.Location = new Point(0, 0);
-            this.lblLoginTitle.Size = new Size(500, 34);
-
-            this.lblLoginSub.Text = "Sign in to access your encrypted vault";
-            this.lblLoginSub.Font = new Font("Segoe UI", 9);
-            this.lblLoginSub.ForeColor = Color.FromArgb(110, 125, 160);
-            this.lblLoginSub.Location = new Point(0, 38);
-            this.lblLoginSub.Size = new Size(500, 20);
-
-            this.lblLoginUsername.Text = "Username";
-            this.lblLoginUsername.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            this.lblLoginUsername.ForeColor = Color.FromArgb(160, 175, 200);
-            this.lblLoginUsername.Location = new Point(0, 90);
-            this.lblLoginUsername.Size = new Size(200, 20);
-
-            this.txtLoginUsername.Location = new Point(0, 112);
-            this.txtLoginUsername.Size = new Size(380, 28);
-            this.txtLoginUsername.Font = new Font("Segoe UI", 11);
-            this.txtLoginUsername.BackColor = Color.FromArgb(28, 32, 50);
-            this.txtLoginUsername.ForeColor = Color.FromArgb(200, 210, 230);
-            this.txtLoginUsername.BorderStyle = BorderStyle.FixedSingle;
-            this.txtLoginUsername.PlaceholderText = "Enter your username";
-
-            this.lblLoginPassword.Text = "Password";
-            this.lblLoginPassword.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-            this.lblLoginPassword.ForeColor = Color.FromArgb(160, 175, 200);
-            this.lblLoginPassword.Location = new Point(0, 156);
-            this.lblLoginPassword.Size = new Size(200, 20);
-
-            this.txtLoginPassword.Location = new Point(0, 178);
-            this.txtLoginPassword.Size = new Size(380, 28);
-            this.txtLoginPassword.Font = new Font("Segoe UI", 11);
-            this.txtLoginPassword.BackColor = Color.FromArgb(28, 32, 50);
-            this.txtLoginPassword.ForeColor = Color.FromArgb(200, 210, 230);
-            this.txtLoginPassword.BorderStyle = BorderStyle.FixedSingle;
-            this.txtLoginPassword.UseSystemPasswordChar = true;
-            this.txtLoginPassword.PlaceholderText = "Enter your password";
-
-            this.lblLoginError.Location = new Point(0, 224);
-            this.lblLoginError.Size = new Size(500, 20);
-            this.lblLoginError.ForeColor = Color.FromArgb(245, 101, 101);
-            this.lblLoginError.Font = new Font("Segoe UI", 8.5f);
-
-            this.btnLogin.Text = "Sign In  →";
-            this.btnLogin.Location = new Point(0, 252);
-            this.btnLogin.Size = new Size(180, 44);
-            this.btnLogin.FlatStyle = FlatStyle.Flat;
-            this.btnLogin.BackColor = Color.FromArgb(99, 179, 237);
-            this.btnLogin.ForeColor = Color.FromArgb(15, 17, 26);
-            this.btnLogin.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-            this.btnLogin.Cursor = Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.Click += this.btnLogin_Click;
-
-            this.lblLoginHint.Text = "Don't have an account? Click 'Register' above.";
-            this.lblLoginHint.Font = new Font("Segoe UI", 8.5f);
-            this.lblLoginHint.ForeColor = Color.FromArgb(110, 125, 160);
-            this.lblLoginHint.Location = new Point(0, 312);
-            this.lblLoginHint.Size = new Size(400, 20);
-
-            this.pnlLoginInner.Controls.AddRange(new Control[]
-            {
-            this.lblLoginTitle, this.lblLoginSub,
-            this.lblLoginUsername, this.txtLoginUsername,
-            this.lblLoginPassword, this.txtLoginPassword,
-            this.lblLoginError, this.btnLogin, this.lblLoginHint
-            });
-            this.tabLogin.Controls.Add(this.pnlLoginInner);
-
-            // ── Register Tab ─────────────────────────────────────────────────────
-            this.tabRegister.Text = "  Register  ";
-            this.tabRegister.BackColor = Color.FromArgb(15, 17, 26);
-
-            this.pnlRegInner.Dock = DockStyle.Fill;
-            this.pnlRegInner.Padding = new Padding(30, 10, 30, 10);
-
-            this.lblRegTitle.Text = "Create account";
-            this.lblRegTitle.Font = new Font("Segoe UI", 18, FontStyle.Bold);
-            this.lblRegTitle.ForeColor = Color.White;
-            this.lblRegTitle.Location = new Point(0, 0);
-            this.lblRegTitle.Size = new Size(500, 34);
-
-            this.lblRegSub.Text = "Your files will be encrypted before storage";
-            this.lblRegSub.Font = new Font("Segoe UI", 9);
-            this.lblRegSub.ForeColor = Color.FromArgb(110, 125, 160);
-            this.lblRegSub.Location = new Point(0, 36);
-            this.lblRegSub.Size = new Size(500, 20);
-
-            SetupRegField(this.lblRegUsername, this.txtRegUsername,
-                "Username", "Min. 3 characters", 80, false);
-            SetupRegField(this.lblRegEmail, this.txtRegEmail,
-                "E-Mail", "your@email.com", 138, false);
-            SetupRegField(this.lblRegPassword, this.txtRegPassword,
-                "Password", "Min. 10 chars, upper, lower, digit, symbol", 196, true);
-            SetupRegField(this.lblRegConfirm, this.txtRegConfirm,
-                "Confirm Password", "Repeat password", 254, true);
-
-            this.lblRegError.Location = new Point(0, 310);
-            this.lblRegError.Size = new Size(500, 20);
-            this.lblRegError.ForeColor = Color.FromArgb(245, 101, 101);
-            this.lblRegError.Font = new Font("Segoe UI", 8.5f);
-
-            this.lblRegSuccess.Location = new Point(0, 310);
-            this.lblRegSuccess.Size = new Size(500, 20);
-            this.lblRegSuccess.ForeColor = Color.FromArgb(72, 199, 142);
-            this.lblRegSuccess.Font = new Font("Segoe UI", 8.5f);
-
-            this.btnRegister.Text = "Create Account  →";
-            this.btnRegister.Location = new Point(0, 336);
-            this.btnRegister.Size = new Size(200, 44);
-            this.btnRegister.FlatStyle = FlatStyle.Flat;
-            this.btnRegister.BackColor = Color.FromArgb(72, 199, 142);
-            this.btnRegister.ForeColor = Color.FromArgb(15, 17, 26);
-            this.btnRegister.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-            this.btnRegister.Cursor = Cursors.Hand;
-            this.btnRegister.FlatAppearance.BorderSize = 0;
-            this.btnRegister.Click += this.btnRegister_Click;
-
-            this.pnlRegInner.Controls.AddRange(new Control[]
-            {
-            this.lblRegTitle, this.lblRegSub,
-            this.lblRegUsername, this.txtRegUsername,
-            this.lblRegEmail,    this.txtRegEmail,
-            this.lblRegPassword, this.txtRegPassword,
-            this.lblRegConfirm,  this.txtRegConfirm,
-            this.lblRegError,    this.lblRegSuccess,
-            this.btnRegister
-            });
-            this.tabRegister.Controls.Add(this.pnlRegInner);
-
-            // ── Assemble ─────────────────────────────────────────────────────────
-            this.tabControl.TabPages.AddRange(new TabPage[] { this.tabLogin, this.tabRegister });
-            this.pnlMain.Controls.Add(this.tabControl);
-
-            this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.pnlSide);
-
-            this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            pnlSide = new Panel();
+            pnlBullets = new Panel();
+            pnlBullet1 = new Panel();
+            pnlBullet2 = new Panel();
+            pnlBullet3 = new Panel();
+            pnlBullet4 = new Panel();
+            pnlLogo = new Panel();
+            lblAppTitle = new Label();
+            lblLogo = new Label();
+            lblBullet1Icon = new Label();
+            lblBullet1Head = new Label();
+            lblBullet1Sub = new Label();
+            lblBullet2Icon = new Label();
+            lblBullet2Head = new Label();
+            lblBullet2Sub = new Label();
+            lblBullet3Icon = new Label();
+            lblBullet3Head = new Label();
+            lblBullet3Sub = new Label();
+            lblBullet4Icon = new Label();
+            lblBullet4Head = new Label();
+            lblBullet4Sub = new Label();
+            pnlMain = new Panel();
+            tabControl = new TabControl();
+            tabLogin = new TabPage();
+            pnlLoginInner = new Panel();
+            lblLoginTitle = new Label();
+            lblLoginSub = new Label();
+            lblLoginUsername = new Label();
+            txtLoginUsername = new TextBox();
+            lblLoginPassword = new Label();
+            txtLoginPassword = new TextBox();
+            lblLoginError = new Label();
+            btnLogin = new Button();
+            lblLoginHint = new Label();
+            tabRegister = new TabPage();
+            pnlRegInner = new Panel();
+            lblRegTitle = new Label();
+            lblRegSub = new Label();
+            lblRegUsername = new Label();
+            txtRegUsername = new TextBox();
+            lblRegEmail = new Label();
+            txtRegEmail = new TextBox();
+            lblRegPassword = new Label();
+            txtRegPassword = new TextBox();
+            lblRegConfirm = new Label();
+            txtRegConfirm = new TextBox();
+            lblRegError = new Label();
+            lblRegSuccess = new Label();
+            btnRegister = new Button();
+            btnEye = new PictureBox();
+            pnlSide.SuspendLayout();
+            pnlBullets.SuspendLayout();
+            pnlLogo.SuspendLayout();
+            pnlMain.SuspendLayout();
+            tabControl.SuspendLayout();
+            tabLogin.SuspendLayout();
+            pnlLoginInner.SuspendLayout();
+            tabRegister.SuspendLayout();
+            pnlRegInner.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEye).BeginInit();
+            SuspendLayout();
+            // 
+            // pnlSide
+            // 
+            pnlSide.BackColor = Color.FromArgb(20, 22, 35);
+            pnlSide.Controls.Add(pnlBullets);
+            pnlSide.Controls.Add(pnlLogo);
+            pnlSide.Dock = DockStyle.Left;
+            pnlSide.Location = new Point(0, 0);
+            pnlSide.Name = "pnlSide";
+            pnlSide.Size = new Size(320, 581);
+            pnlSide.TabIndex = 1;
+            // 
+            // pnlBullets
+            // 
+            pnlBullets.Controls.Add(pnlBullet1);
+            pnlBullets.Controls.Add(pnlBullet2);
+            pnlBullets.Controls.Add(pnlBullet3);
+            pnlBullets.Controls.Add(pnlBullet4);
+            pnlBullets.Dock = DockStyle.Fill;
+            pnlBullets.Location = new Point(0, 180);
+            pnlBullets.Name = "pnlBullets";
+            pnlBullets.Padding = new Padding(24, 20, 24, 0);
+            pnlBullets.Size = new Size(320, 401);
+            pnlBullets.TabIndex = 0;
+            // 
+            // pnlBullet1
+            // 
+            pnlBullet1.Location = new Point(0, 0);
+            pnlBullet1.Name = "pnlBullet1";
+            pnlBullet1.Size = new Size(200, 100);
+            pnlBullet1.TabIndex = 0;
+            // 
+            // pnlBullet2
+            // 
+            pnlBullet2.Location = new Point(0, 0);
+            pnlBullet2.Name = "pnlBullet2";
+            pnlBullet2.Size = new Size(200, 100);
+            pnlBullet2.TabIndex = 1;
+            // 
+            // pnlBullet3
+            // 
+            pnlBullet3.Location = new Point(0, 0);
+            pnlBullet3.Name = "pnlBullet3";
+            pnlBullet3.Size = new Size(200, 100);
+            pnlBullet3.TabIndex = 2;
+            // 
+            // pnlBullet4
+            // 
+            pnlBullet4.Location = new Point(0, 0);
+            pnlBullet4.Name = "pnlBullet4";
+            pnlBullet4.Size = new Size(200, 100);
+            pnlBullet4.TabIndex = 3;
+            // 
+            // pnlLogo
+            // 
+            pnlLogo.BackColor = Color.FromArgb(30, 34, 54);
+            pnlLogo.Controls.Add(lblAppTitle);
+            pnlLogo.Controls.Add(lblLogo);
+            pnlLogo.Dock = DockStyle.Top;
+            pnlLogo.Location = new Point(0, 0);
+            pnlLogo.Name = "pnlLogo";
+            pnlLogo.Size = new Size(320, 180);
+            pnlLogo.TabIndex = 1;
+            // 
+            // lblAppTitle
+            // 
+            lblAppTitle.Dock = DockStyle.Fill;
+            lblAppTitle.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
+            lblAppTitle.ForeColor = Color.FromArgb(99, 179, 237);
+            lblAppTitle.Location = new Point(0, 100);
+            lblAppTitle.Name = "lblAppTitle";
+            lblAppTitle.Size = new Size(320, 80);
+            lblAppTitle.TabIndex = 0;
+            lblAppTitle.Text = "SecureVault";
+            lblAppTitle.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblLogo
+            // 
+            lblLogo.Dock = DockStyle.Top;
+            lblLogo.Font = new Font("Segoe UI Emoji", 42F);
+            lblLogo.ForeColor = Color.White;
+            lblLogo.Location = new Point(0, 0);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Size = new Size(320, 100);
+            lblLogo.TabIndex = 1;
+            lblLogo.Text = "🔐";
+            lblLogo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBullet1Icon
+            // 
+            lblBullet1Icon.Location = new Point(0, 0);
+            lblBullet1Icon.Name = "lblBullet1Icon";
+            lblBullet1Icon.Size = new Size(100, 23);
+            lblBullet1Icon.TabIndex = 0;
+            // 
+            // lblBullet1Head
+            // 
+            lblBullet1Head.Location = new Point(0, 0);
+            lblBullet1Head.Name = "lblBullet1Head";
+            lblBullet1Head.Size = new Size(100, 23);
+            lblBullet1Head.TabIndex = 0;
+            // 
+            // lblBullet1Sub
+            // 
+            lblBullet1Sub.Location = new Point(0, 0);
+            lblBullet1Sub.Name = "lblBullet1Sub";
+            lblBullet1Sub.Size = new Size(100, 23);
+            lblBullet1Sub.TabIndex = 0;
+            // 
+            // lblBullet2Icon
+            // 
+            lblBullet2Icon.Location = new Point(0, 0);
+            lblBullet2Icon.Name = "lblBullet2Icon";
+            lblBullet2Icon.Size = new Size(100, 23);
+            lblBullet2Icon.TabIndex = 0;
+            // 
+            // lblBullet2Head
+            // 
+            lblBullet2Head.Location = new Point(0, 0);
+            lblBullet2Head.Name = "lblBullet2Head";
+            lblBullet2Head.Size = new Size(100, 23);
+            lblBullet2Head.TabIndex = 0;
+            // 
+            // lblBullet2Sub
+            // 
+            lblBullet2Sub.Location = new Point(0, 0);
+            lblBullet2Sub.Name = "lblBullet2Sub";
+            lblBullet2Sub.Size = new Size(100, 23);
+            lblBullet2Sub.TabIndex = 0;
+            // 
+            // lblBullet3Icon
+            // 
+            lblBullet3Icon.Location = new Point(0, 0);
+            lblBullet3Icon.Name = "lblBullet3Icon";
+            lblBullet3Icon.Size = new Size(100, 23);
+            lblBullet3Icon.TabIndex = 0;
+            // 
+            // lblBullet3Head
+            // 
+            lblBullet3Head.Location = new Point(0, 0);
+            lblBullet3Head.Name = "lblBullet3Head";
+            lblBullet3Head.Size = new Size(100, 23);
+            lblBullet3Head.TabIndex = 0;
+            // 
+            // lblBullet3Sub
+            // 
+            lblBullet3Sub.Location = new Point(0, 0);
+            lblBullet3Sub.Name = "lblBullet3Sub";
+            lblBullet3Sub.Size = new Size(100, 23);
+            lblBullet3Sub.TabIndex = 0;
+            // 
+            // lblBullet4Icon
+            // 
+            lblBullet4Icon.Location = new Point(0, 0);
+            lblBullet4Icon.Name = "lblBullet4Icon";
+            lblBullet4Icon.Size = new Size(100, 23);
+            lblBullet4Icon.TabIndex = 0;
+            // 
+            // lblBullet4Head
+            // 
+            lblBullet4Head.Location = new Point(0, 0);
+            lblBullet4Head.Name = "lblBullet4Head";
+            lblBullet4Head.Size = new Size(100, 23);
+            lblBullet4Head.TabIndex = 0;
+            // 
+            // lblBullet4Sub
+            // 
+            lblBullet4Sub.Location = new Point(0, 0);
+            lblBullet4Sub.Name = "lblBullet4Sub";
+            lblBullet4Sub.Size = new Size(100, 23);
+            lblBullet4Sub.TabIndex = 0;
+            // 
+            // pnlMain
+            // 
+            pnlMain.BackColor = Color.FromArgb(15, 17, 26);
+            pnlMain.Controls.Add(tabControl);
+            pnlMain.Dock = DockStyle.Fill;
+            pnlMain.Location = new Point(320, 0);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Padding = new Padding(40);
+            pnlMain.Size = new Size(564, 581);
+            pnlMain.TabIndex = 0;
+            // 
+            // tabControl
+            // 
+            tabControl.Appearance = TabAppearance.FlatButtons;
+            tabControl.Controls.Add(tabLogin);
+            tabControl.Controls.Add(tabRegister);
+            tabControl.Dock = DockStyle.Fill;
+            tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
+            tabControl.Font = new Font("Segoe UI", 10F);
+            tabControl.ItemSize = new Size(130, 36);
+            tabControl.Location = new Point(40, 40);
+            tabControl.Name = "tabControl";
+            tabControl.SelectedIndex = 0;
+            tabControl.Size = new Size(484, 501);
+            tabControl.TabIndex = 0;
+            tabControl.DrawItem += tabControl_DrawItem;
+            // 
+            // tabLogin
+            // 
+            tabLogin.BackColor = Color.FromArgb(15, 17, 26);
+            tabLogin.Controls.Add(pnlLoginInner);
+            tabLogin.Location = new Point(4, 40);
+            tabLogin.Name = "tabLogin";
+            tabLogin.Size = new Size(476, 457);
+            tabLogin.TabIndex = 0;
+            tabLogin.Text = "  Sign In  ";
+            // 
+            // pnlLoginInner
+            // 
+            pnlLoginInner.Controls.Add(btnEye);
+            pnlLoginInner.Controls.Add(lblLoginTitle);
+            pnlLoginInner.Controls.Add(lblLoginSub);
+            pnlLoginInner.Controls.Add(lblLoginUsername);
+            pnlLoginInner.Controls.Add(txtLoginUsername);
+            pnlLoginInner.Controls.Add(lblLoginPassword);
+            pnlLoginInner.Controls.Add(txtLoginPassword);
+            pnlLoginInner.Controls.Add(lblLoginError);
+            pnlLoginInner.Controls.Add(btnLogin);
+            pnlLoginInner.Controls.Add(lblLoginHint);
+            pnlLoginInner.Dock = DockStyle.Fill;
+            pnlLoginInner.Location = new Point(0, 0);
+            pnlLoginInner.Name = "pnlLoginInner";
+            pnlLoginInner.Padding = new Padding(30, 20, 30, 20);
+            pnlLoginInner.Size = new Size(476, 457);
+            pnlLoginInner.TabIndex = 0;
+            // 
+            // lblLoginTitle
+            // 
+            lblLoginTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblLoginTitle.ForeColor = Color.White;
+            lblLoginTitle.Location = new Point(0, 0);
+            lblLoginTitle.Name = "lblLoginTitle";
+            lblLoginTitle.Size = new Size(500, 34);
+            lblLoginTitle.TabIndex = 0;
+            lblLoginTitle.Text = "Welcome back";
+            // 
+            // lblLoginSub
+            // 
+            lblLoginSub.Font = new Font("Segoe UI", 9F);
+            lblLoginSub.ForeColor = Color.FromArgb(110, 125, 160);
+            lblLoginSub.Location = new Point(0, 38);
+            lblLoginSub.Name = "lblLoginSub";
+            lblLoginSub.Size = new Size(500, 20);
+            lblLoginSub.TabIndex = 1;
+            lblLoginSub.Text = "Sign in to access your encrypted vault";
+            // 
+            // lblLoginUsername
+            // 
+            lblLoginUsername.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblLoginUsername.ForeColor = Color.FromArgb(160, 175, 200);
+            lblLoginUsername.Location = new Point(0, 90);
+            lblLoginUsername.Name = "lblLoginUsername";
+            lblLoginUsername.Size = new Size(200, 20);
+            lblLoginUsername.TabIndex = 2;
+            lblLoginUsername.Text = "Username";
+            // 
+            // txtLoginUsername
+            // 
+            txtLoginUsername.BackColor = Color.FromArgb(28, 32, 50);
+            txtLoginUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtLoginUsername.Font = new Font("Segoe UI", 11F);
+            txtLoginUsername.ForeColor = Color.FromArgb(200, 210, 230);
+            txtLoginUsername.Location = new Point(0, 112);
+            txtLoginUsername.Name = "txtLoginUsername";
+            txtLoginUsername.PlaceholderText = "Enter your username";
+            txtLoginUsername.Size = new Size(380, 27);
+            txtLoginUsername.TabIndex = 3;
+            // 
+            // lblLoginPassword
+            // 
+            lblLoginPassword.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblLoginPassword.ForeColor = Color.FromArgb(160, 175, 200);
+            lblLoginPassword.Location = new Point(0, 156);
+            lblLoginPassword.Name = "lblLoginPassword";
+            lblLoginPassword.Size = new Size(200, 20);
+            lblLoginPassword.TabIndex = 4;
+            lblLoginPassword.Text = "Password";
+            // 
+            // txtLoginPassword
+            // 
+            txtLoginPassword.BackColor = Color.FromArgb(28, 32, 50);
+            txtLoginPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtLoginPassword.Font = new Font("Segoe UI", 11F);
+            txtLoginPassword.ForeColor = Color.FromArgb(200, 210, 230);
+            txtLoginPassword.Location = new Point(0, 178);
+            txtLoginPassword.Name = "txtLoginPassword";
+            txtLoginPassword.PlaceholderText = "Enter your password";
+            txtLoginPassword.Size = new Size(380, 27);
+            txtLoginPassword.TabIndex = 5;
+            txtLoginPassword.UseSystemPasswordChar = true;
+            // 
+            // lblLoginError
+            // 
+            lblLoginError.Font = new Font("Segoe UI", 8.5F);
+            lblLoginError.ForeColor = Color.FromArgb(245, 101, 101);
+            lblLoginError.Location = new Point(0, 224);
+            lblLoginError.Name = "lblLoginError";
+            lblLoginError.Size = new Size(500, 20);
+            lblLoginError.TabIndex = 6;
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = Color.FromArgb(99, 179, 237);
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnLogin.ForeColor = Color.FromArgb(15, 17, 26);
+            btnLogin.Location = new Point(0, 252);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(180, 44);
+            btnLogin.TabIndex = 7;
+            btnLogin.Text = "Sign In  →";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // lblLoginHint
+            // 
+            lblLoginHint.Font = new Font("Segoe UI", 8.5F);
+            lblLoginHint.ForeColor = Color.FromArgb(110, 125, 160);
+            lblLoginHint.Location = new Point(0, 312);
+            lblLoginHint.Name = "lblLoginHint";
+            lblLoginHint.Size = new Size(400, 20);
+            lblLoginHint.TabIndex = 8;
+            lblLoginHint.Text = "Don't have an account? Click 'Register' above.";
+            // 
+            // tabRegister
+            // 
+            tabRegister.BackColor = Color.FromArgb(15, 17, 26);
+            tabRegister.Controls.Add(pnlRegInner);
+            tabRegister.Location = new Point(4, 40);
+            tabRegister.Name = "tabRegister";
+            tabRegister.Size = new Size(112, 0);
+            tabRegister.TabIndex = 1;
+            tabRegister.Text = "  Register  ";
+            // 
+            // pnlRegInner
+            // 
+            pnlRegInner.Controls.Add(lblRegTitle);
+            pnlRegInner.Controls.Add(lblRegSub);
+            pnlRegInner.Controls.Add(lblRegUsername);
+            pnlRegInner.Controls.Add(txtRegUsername);
+            pnlRegInner.Controls.Add(lblRegEmail);
+            pnlRegInner.Controls.Add(txtRegEmail);
+            pnlRegInner.Controls.Add(lblRegPassword);
+            pnlRegInner.Controls.Add(txtRegPassword);
+            pnlRegInner.Controls.Add(lblRegConfirm);
+            pnlRegInner.Controls.Add(txtRegConfirm);
+            pnlRegInner.Controls.Add(lblRegError);
+            pnlRegInner.Controls.Add(lblRegSuccess);
+            pnlRegInner.Controls.Add(btnRegister);
+            pnlRegInner.Dock = DockStyle.Fill;
+            pnlRegInner.Location = new Point(0, 0);
+            pnlRegInner.Name = "pnlRegInner";
+            pnlRegInner.Padding = new Padding(30, 10, 30, 10);
+            pnlRegInner.Size = new Size(112, 0);
+            pnlRegInner.TabIndex = 0;
+            // 
+            // lblRegTitle
+            // 
+            lblRegTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblRegTitle.ForeColor = Color.White;
+            lblRegTitle.Location = new Point(0, 0);
+            lblRegTitle.Name = "lblRegTitle";
+            lblRegTitle.Size = new Size(500, 34);
+            lblRegTitle.TabIndex = 0;
+            lblRegTitle.Text = "Create account";
+            // 
+            // lblRegSub
+            // 
+            lblRegSub.Font = new Font("Segoe UI", 9F);
+            lblRegSub.ForeColor = Color.FromArgb(110, 125, 160);
+            lblRegSub.Location = new Point(0, 36);
+            lblRegSub.Name = "lblRegSub";
+            lblRegSub.Size = new Size(500, 20);
+            lblRegSub.TabIndex = 1;
+            lblRegSub.Text = "Your files will be encrypted before storage";
+            // 
+            // lblRegUsername
+            // 
+            lblRegUsername.Location = new Point(0, 0);
+            lblRegUsername.Name = "lblRegUsername";
+            lblRegUsername.Size = new Size(100, 23);
+            lblRegUsername.TabIndex = 2;
+            // 
+            // txtRegUsername
+            // 
+            txtRegUsername.Location = new Point(0, 0);
+            txtRegUsername.Name = "txtRegUsername";
+            txtRegUsername.Size = new Size(100, 25);
+            txtRegUsername.TabIndex = 3;
+            // 
+            // lblRegEmail
+            // 
+            lblRegEmail.Location = new Point(0, 0);
+            lblRegEmail.Name = "lblRegEmail";
+            lblRegEmail.Size = new Size(100, 23);
+            lblRegEmail.TabIndex = 4;
+            // 
+            // txtRegEmail
+            // 
+            txtRegEmail.Location = new Point(0, 0);
+            txtRegEmail.Name = "txtRegEmail";
+            txtRegEmail.Size = new Size(100, 25);
+            txtRegEmail.TabIndex = 5;
+            // 
+            // lblRegPassword
+            // 
+            lblRegPassword.Location = new Point(0, 0);
+            lblRegPassword.Name = "lblRegPassword";
+            lblRegPassword.Size = new Size(100, 23);
+            lblRegPassword.TabIndex = 6;
+            // 
+            // txtRegPassword
+            // 
+            txtRegPassword.Location = new Point(0, 0);
+            txtRegPassword.Name = "txtRegPassword";
+            txtRegPassword.Size = new Size(100, 25);
+            txtRegPassword.TabIndex = 7;
+            // 
+            // lblRegConfirm
+            // 
+            lblRegConfirm.Location = new Point(0, 0);
+            lblRegConfirm.Name = "lblRegConfirm";
+            lblRegConfirm.Size = new Size(100, 23);
+            lblRegConfirm.TabIndex = 8;
+            // 
+            // txtRegConfirm
+            // 
+            txtRegConfirm.Location = new Point(0, 0);
+            txtRegConfirm.Name = "txtRegConfirm";
+            txtRegConfirm.Size = new Size(100, 25);
+            txtRegConfirm.TabIndex = 9;
+            // 
+            // lblRegError
+            // 
+            lblRegError.Font = new Font("Segoe UI", 8.5F);
+            lblRegError.ForeColor = Color.FromArgb(245, 101, 101);
+            lblRegError.Location = new Point(0, 310);
+            lblRegError.Name = "lblRegError";
+            lblRegError.Size = new Size(500, 20);
+            lblRegError.TabIndex = 10;
+            // 
+            // lblRegSuccess
+            // 
+            lblRegSuccess.Font = new Font("Segoe UI", 8.5F);
+            lblRegSuccess.ForeColor = Color.FromArgb(72, 199, 142);
+            lblRegSuccess.Location = new Point(0, 310);
+            lblRegSuccess.Name = "lblRegSuccess";
+            lblRegSuccess.Size = new Size(500, 20);
+            lblRegSuccess.TabIndex = 11;
+            // 
+            // btnRegister
+            // 
+            btnRegister.BackColor = Color.FromArgb(72, 199, 142);
+            btnRegister.Cursor = Cursors.Hand;
+            btnRegister.FlatAppearance.BorderSize = 0;
+            btnRegister.FlatStyle = FlatStyle.Flat;
+            btnRegister.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnRegister.ForeColor = Color.FromArgb(15, 17, 26);
+            btnRegister.Location = new Point(0, 336);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(200, 44);
+            btnRegister.TabIndex = 12;
+            btnRegister.Text = "Create Account  →";
+            btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
+            // 
+            // btnEye
+            // 
+            btnEye.Image = (Image)resources.GetObject("btnEye.Image");
+            btnEye.Location = new Point(386, 178);
+            btnEye.Name = "btnEye";
+            btnEye.Size = new Size(26, 27);
+            btnEye.SizeMode = PictureBoxSizeMode.Zoom;
+            btnEye.TabIndex = 9;
+            btnEye.TabStop = false;
+            // 
+            // LoginForm
+            // 
+            BackColor = Color.FromArgb(15, 17, 26);
+            ClientSize = new Size(884, 581);
+            Controls.Add(pnlMain);
+            Controls.Add(pnlSide);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MaximumSize = new Size(900, 620);
+            MinimumSize = new Size(900, 620);
+            Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SecureVault — Secure File Storage";
+            pnlSide.ResumeLayout(false);
+            pnlBullets.ResumeLayout(false);
+            pnlLogo.ResumeLayout(false);
+            pnlMain.ResumeLayout(false);
+            tabControl.ResumeLayout(false);
+            tabLogin.ResumeLayout(false);
+            pnlLoginInner.ResumeLayout(false);
+            pnlLoginInner.PerformLayout();
+            tabRegister.ResumeLayout(false);
+            pnlRegInner.ResumeLayout(false);
+            pnlRegInner.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEye).EndInit();
+            ResumeLayout(false);
         }
 
         // ─── Designer helper methods ─────────────────────────────────────────────
@@ -399,5 +687,6 @@
         private Label lblRegError;
         private Label lblRegSuccess;
         private Button btnRegister;
+        private PictureBox btnEye;
     }
 }

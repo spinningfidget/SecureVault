@@ -1,5 +1,6 @@
 using WinFormsApp2.Models;
 using WinFormsApp2.Services;
+using Timer = System.Windows.Forms.Timer;
 
 namespace WinFormsApp2
 {
@@ -9,11 +10,23 @@ namespace WinFormsApp2
 
         public User? LoggedInUser { get; private set; }
         public string? LoggedInPassword { get; private set; }
+        private Timer hideTimer = new Timer();
 
         public LoginForm(UserService userService)
         {
             _userService = userService;
             InitializeComponent();
+            // Password textbox
+            txtLoginPassword.UseSystemPasswordChar = true;
+
+            // Timer setup
+            hideTimer.Interval = 3000; // 3 seconds
+            hideTimer.Tick += HideTimer_Tick;
+
+            // Eye button events
+            btnEye.MouseDown += BtnEye_MouseDown;
+            btnEye.MouseUp += BtnEye_MouseUp;
+            btnEye.MouseLeave += BtnEye_MouseLeave;
         }
 
         // ─── Tab owner-draw ───────────────────────────────────────────────────────
@@ -37,7 +50,7 @@ namespace WinFormsApp2
             e.Graphics.DrawString(text, new Font("Segoe UI", 10, FontStyle.Bold), fg, e.Bounds, sf);
         }
 
-        // ─── Login tab ───────────────────────────────────────────────────────────
+        // ─── Login tab ───────────────────────────────────────────────────────────        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -57,9 +70,54 @@ namespace WinFormsApp2
             Close();
         }
 
+        // Show password when mouse is pressed
+        private void BtnEye_MouseDown(object? sender, MouseEventArgs e)
+        {
+            ShowPassword();
+
+            // Restart timer every time user presses
+            hideTimer.Stop();
+            hideTimer.Start();
+        }
+        // Hide immediately when released
+        private void BtnEye_MouseUp(object? sender, MouseEventArgs e)
+        {
+            HidePassword();
+        }
+
+        // Extra protection if cursor leaves button
+        private void BtnEye_MouseLeave(object? sender, EventArgs e)
+        {
+            HidePassword();
+        }
+
+        // Auto-hide after timeout
+        private void HideTimer_Tick(object? sender, EventArgs e)
+        {
+            HidePassword();
+            hideTimer.Stop();
+        }
+
+        private void ShowPassword()
+        {
+            txtLoginPassword.UseSystemPasswordChar = false;
+
+            // Optional:
+            // btnEye.Image = Properties.Resources.eye_open;
+        }
+
+        private void HidePassword()
+        {
+            txtLoginPassword.UseSystemPasswordChar = true;
+
+            // Optional:
+            // btnEye.Image = Properties.Resources.eye_closed;
+
+            hideTimer.Stop();
+        }
         // ─── Register tab ────────────────────────────────────────────────────────
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object? sender, EventArgs e)
         {
             lblRegError.Text = string.Empty;
             lblRegSuccess.Text = string.Empty;
