@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace WinFormsApp2.Services;
+namespace SecureVault.Services;
 
 /// <summary>
 /// Cryptographic service implementing EU-standard encryption:

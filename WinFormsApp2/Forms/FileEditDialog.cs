@@ -1,6 +1,6 @@
-using WinFormsApp2.Models;
+using SecureVault.Models;
 
-namespace WinFormsApp2
+namespace SecureVault.Forms
 {
     public partial class FileEditDialog : Form
     {
