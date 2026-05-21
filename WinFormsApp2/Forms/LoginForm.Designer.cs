@@ -413,7 +413,7 @@
             tabRegister.Controls.Add(pnlRegInner);
             tabRegister.Location = new Point(4, 40);
             tabRegister.Name = "tabRegister";
-            tabRegister.Size = new Size(112, 0);
+            tabRegister.Size = tabLogin.Size;
             tabRegister.TabIndex = 1;
             tabRegister.Text = "  Register  ";
             // 
@@ -436,7 +436,7 @@
             pnlRegInner.Location = new Point(0, 0);
             pnlRegInner.Name = "pnlRegInner";
             pnlRegInner.Padding = new Padding(30, 10, 30, 10);
-            pnlRegInner.Size = new Size(112, 0);
+            pnlRegInner.Size = pnlLoginInner.Size;
             pnlRegInner.TabIndex = 0;
             // 
             // lblRegTitle

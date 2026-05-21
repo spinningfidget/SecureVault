@@ -1,5 +1,3 @@
-using WinFormsApp2.Models;
-using WinFormsApp2.Services;
 using SecureVault.Models;
 using SecureVault.Services;
 using Timer = System.Windows.Forms.Timer;
@@ -29,6 +27,20 @@ namespace SecureVault.Forms
             btnEye.MouseDown += BtnEye_MouseDown;
             btnEye.MouseUp += BtnEye_MouseUp;
             btnEye.MouseLeave += BtnEye_MouseLeave;
+            
+            
+            // Ensure register tab is laid out properly
+            tabRegister.Size = tabLogin.Size;
+
+            // Setup register fields layout + styling
+            SetupRegField(lblRegUsername, txtRegUsername, "Username", "Choose a username", 90, false);
+            SetupRegField(lblRegEmail,    txtRegEmail,    "Email",    "Enter your email",   156, false);
+            SetupRegField(lblRegPassword, txtRegPassword, "Password", "Create a password", 222, true);
+            SetupRegField(lblRegConfirm,  txtRegConfirm,  "Confirm",  "Repeat password",   288, true);
+
+            // optional: align button below fields
+            btnRegister.Location = new Point(0, 350);
+
         }
 
         // ─── Tab owner-draw ───────────────────────────────────────────────────────
