@@ -10,7 +10,7 @@ namespace SecureVault.Forms
 
         public User? LoggedInUser { get; private set; }
         public string? LoggedInPassword { get; private set; }
-        private Timer hideTimer = new Timer();
+        private readonly Timer _hideTimer = new();
 
         public LoginForm(UserService userService)
         {
@@ -20,8 +20,8 @@ namespace SecureVault.Forms
             txtLoginPassword.UseSystemPasswordChar = true;
 
             // Timer setup
-            hideTimer.Interval = 3000; // 3 seconds
-            hideTimer.Tick += HideTimer_Tick;
+            _hideTimer.Interval = 3000; // 3 seconds
+            _hideTimer.Tick += HideTimer_Tick;
 
             // Eye button events
             btnEye.MouseDown += BtnEye_MouseDown;
@@ -73,7 +73,7 @@ namespace SecureVault.Forms
             var user = _userService.Login(txtLoginUsername.Text, txtLoginPassword.Text);
             if (user == null)
             {
-                lblLoginError.Text = "⚠ Invalid username or password.";
+                lblLoginError.Text = @"⚠ Invalid username or password.";
                 txtLoginPassword.Clear();
                 return;
             }
@@ -90,8 +90,8 @@ namespace SecureVault.Forms
             ShowPassword();
 
             // Restart timer every time user presses
-            hideTimer.Stop();
-            hideTimer.Start();
+            _hideTimer.Stop();
+            _hideTimer.Start();
         }
         // Hide immediately when released
         private void BtnEye_MouseUp(object? sender, MouseEventArgs e)
@@ -109,7 +109,7 @@ namespace SecureVault.Forms
         private void HideTimer_Tick(object? sender, EventArgs e)
         {
             HidePassword();
-            hideTimer.Stop();
+            _hideTimer.Stop();
         }
 
         private void ShowPassword()
@@ -127,7 +127,7 @@ namespace SecureVault.Forms
             // Optional:
             // btnEye.Image = Properties.Resources.eye_closed;
 
-            hideTimer.Stop();
+            _hideTimer.Stop();
         }
         // ─── Register tab ────────────────────────────────────────────────────────
 
@@ -138,7 +138,7 @@ namespace SecureVault.Forms
 
             if (txtRegPassword.Text != txtRegConfirm.Text)
             {
-                lblRegError.Text = "⚠  Passwords do not match.";
+                lblRegError.Text = @"⚠  Passwords do not match.";
                 return;
             }
 
@@ -149,11 +149,11 @@ namespace SecureVault.Forms
 
             if (!ok)
             {
-                lblRegError.Text = $"⚠  {err}";
+                lblRegError.Text = $@"⚠  {err}";
                 return;
             }
 
-            lblRegSuccess.Text = "✓  Account created! You can now sign in.";
+            lblRegSuccess.Text = @"✓  Account created! You can now sign in.";
             txtRegUsername.Clear();
             txtRegEmail.Clear();
             txtRegPassword.Clear();
