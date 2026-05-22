@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging;
 using SecureVault.Models;
 using SecureVault.Services;
 using Timer = System.Windows.Forms.Timer;
@@ -11,11 +12,15 @@ namespace SecureVault.Forms
         public User? LoggedInUser { get; private set; }
         public string? LoggedInPassword { get; private set; }
         private readonly Timer _hideTimer = new();
+        private readonly ILogger<LoginForm> _logger;
 
-        public LoginForm(UserService userService)
+        public LoginForm(UserService userService, ILogger<LoginForm> logger)
         {
             _userService = userService;
+            _logger = logger;
             InitializeComponent();
+            _logger.LogInformation("LoginForm initialized");
+            
             // Password textbox
             txtLoginPassword.UseSystemPasswordChar = true;
 
@@ -81,6 +86,7 @@ namespace SecureVault.Forms
             LoggedInUser = user;
             LoggedInPassword = txtLoginPassword.Text;
             DialogResult = DialogResult.OK;
+            _logger.LogInformation("Login successful");
             Close();
         }
 
