@@ -15,59 +15,63 @@
 
         #region Windows Form Designer generated code
 
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            pnlSide = new Panel();
-            pnlBullets = new Panel();
-            pnlBullet1 = new Panel();
-            pnlBullet2 = new Panel();
-            pnlBullet3 = new Panel();
-            pnlBullet4 = new Panel();
-            pnlLogo = new Panel();
-            lblAppTitle = new Label();
-            lblLogo = new Label();
-            lblBullet1Icon = new Label();
-            lblBullet1Head = new Label();
-            lblBullet1Sub = new Label();
-            lblBullet2Icon = new Label();
-            lblBullet2Head = new Label();
-            lblBullet2Sub = new Label();
-            lblBullet3Icon = new Label();
-            lblBullet3Head = new Label();
-            lblBullet3Sub = new Label();
-            lblBullet4Icon = new Label();
-            lblBullet4Head = new Label();
-            lblBullet4Sub = new Label();
-            pnlMain = new Panel();
-            tabControl = new TabControl();
-            tabLogin = new TabPage();
-            pnlLoginInner = new Panel();
-            lblLoginTitle = new Label();
-            lblLoginSub = new Label();
-            lblLoginUsername = new Label();
-            txtLoginUsername = new TextBox();
-            lblLoginPassword = new Label();
-            txtLoginPassword = new TextBox();
-            lblLoginError = new Label();
-            btnLogin = new Button();
-            lblLoginHint = new Label();
-            tabRegister = new TabPage();
-            pnlRegInner = new Panel();
-            lblRegTitle = new Label();
-            lblRegSub = new Label();
-            lblRegUsername = new Label();
-            txtRegUsername = new TextBox();
-            lblRegEmail = new Label();
-            txtRegEmail = new TextBox();
-            lblRegPassword = new Label();
-            txtRegPassword = new TextBox();
-            lblRegConfirm = new Label();
-            txtRegConfirm = new TextBox();
-            lblRegError = new Label();
-            lblRegSuccess = new Label();
-            btnRegister = new Button();
-            btnEye = new PictureBox();
+            pnlSide = new System.Windows.Forms.Panel();
+            pnlBullets = new System.Windows.Forms.Panel();
+            pnlBullet1 = new System.Windows.Forms.Panel();
+            pnlBullet2 = new System.Windows.Forms.Panel();
+            pnlBullet3 = new System.Windows.Forms.Panel();
+            pnlBullet4 = new System.Windows.Forms.Panel();
+            pnlLogo = new System.Windows.Forms.Panel();
+            lblAppTitle = new System.Windows.Forms.Label();
+            lblLogo = new System.Windows.Forms.Label();
+            lblBullet1Icon = new System.Windows.Forms.Label();
+            lblBullet1Head = new System.Windows.Forms.Label();
+            lblBullet1Sub = new System.Windows.Forms.Label();
+            lblBullet2Icon = new System.Windows.Forms.Label();
+            lblBullet2Head = new System.Windows.Forms.Label();
+            lblBullet2Sub = new System.Windows.Forms.Label();
+            lblBullet3Icon = new System.Windows.Forms.Label();
+            lblBullet3Head = new System.Windows.Forms.Label();
+            lblBullet3Sub = new System.Windows.Forms.Label();
+            lblBullet4Icon = new System.Windows.Forms.Label();
+            lblBullet4Head = new System.Windows.Forms.Label();
+            lblBullet4Sub = new System.Windows.Forms.Label();
+            pnlMain = new System.Windows.Forms.Panel();
+            tabControl = new System.Windows.Forms.TabControl();
+            tabLogin = new System.Windows.Forms.TabPage();
+            pnlLoginInner = new System.Windows.Forms.Panel();
+            btnEye = new System.Windows.Forms.PictureBox();
+            lblLoginTitle = new System.Windows.Forms.Label();
+            lblLoginSub = new System.Windows.Forms.Label();
+            lblLoginUsername = new System.Windows.Forms.Label();
+            txtLoginUsername = new System.Windows.Forms.TextBox();
+            lblLoginPassword = new System.Windows.Forms.Label();
+            txtLoginPassword = new System.Windows.Forms.TextBox();
+            lblLoginError = new System.Windows.Forms.Label();
+            btnLogin = new System.Windows.Forms.Button();
+            lblLoginHint = new System.Windows.Forms.Label();
+            tabRegister = new System.Windows.Forms.TabPage();
+            pnlRegInner = new System.Windows.Forms.Panel();
+            lblRegTitle = new System.Windows.Forms.Label();
+            lblRegSub = new System.Windows.Forms.Label();
+            lblRegUsername = new System.Windows.Forms.Label();
+            txtRegUsername = new System.Windows.Forms.TextBox();
+            lblRegEmail = new System.Windows.Forms.Label();
+            txtRegEmail = new System.Windows.Forms.TextBox();
+            lblRegPassword = new System.Windows.Forms.Label();
+            txtRegPassword = new System.Windows.Forms.TextBox();
+            lblRegConfirm = new System.Windows.Forms.Label();
+            txtRegConfirm = new System.Windows.Forms.TextBox();
+            lblRegError = new System.Windows.Forms.Label();
+            lblRegSuccess = new System.Windows.Forms.Label();
+            btnRegister = new System.Windows.Forms.Button();
             pnlSide.SuspendLayout();
             pnlBullets.SuspendLayout();
             pnlLogo.SuspendLayout();
@@ -75,20 +79,20 @@
             tabControl.SuspendLayout();
             tabLogin.SuspendLayout();
             pnlLoginInner.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEye).BeginInit();
             tabRegister.SuspendLayout();
             pnlRegInner.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnEye).BeginInit();
             SuspendLayout();
             // 
             // pnlSide
             // 
-            pnlSide.BackColor = Color.FromArgb(20, 22, 35);
+            pnlSide.BackColor = System.Drawing.Color.FromArgb(((int)((byte)20)), ((int)((byte)22)), ((int)((byte)35)));
             pnlSide.Controls.Add(pnlBullets);
             pnlSide.Controls.Add(pnlLogo);
-            pnlSide.Dock = DockStyle.Left;
-            pnlSide.Location = new Point(0, 0);
+            pnlSide.Dock = System.Windows.Forms.DockStyle.Left;
+            pnlSide.Location = new System.Drawing.Point(0, 0);
             pnlSide.Name = "pnlSide";
-            pnlSide.Size = new Size(320, 581);
+            pnlSide.Size = new System.Drawing.Size(320, 564);
             pnlSide.TabIndex = 1;
             // 
             // pnlBullets
@@ -97,194 +101,194 @@
             pnlBullets.Controls.Add(pnlBullet2);
             pnlBullets.Controls.Add(pnlBullet3);
             pnlBullets.Controls.Add(pnlBullet4);
-            pnlBullets.Dock = DockStyle.Fill;
-            pnlBullets.Location = new Point(0, 180);
+            pnlBullets.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlBullets.Location = new System.Drawing.Point(0, 180);
             pnlBullets.Name = "pnlBullets";
-            pnlBullets.Padding = new Padding(24, 20, 24, 0);
-            pnlBullets.Size = new Size(320, 401);
+            pnlBullets.Padding = new System.Windows.Forms.Padding(24, 20, 24, 0);
+            pnlBullets.Size = new System.Drawing.Size(320, 384);
             pnlBullets.TabIndex = 0;
             // 
             // pnlBullet1
             // 
-            pnlBullet1.Location = new Point(0, 0);
+            pnlBullet1.Location = new System.Drawing.Point(0, 0);
             pnlBullet1.Name = "pnlBullet1";
-            pnlBullet1.Size = new Size(200, 100);
+            pnlBullet1.Size = new System.Drawing.Size(200, 100);
             pnlBullet1.TabIndex = 0;
             // 
             // pnlBullet2
             // 
-            pnlBullet2.Location = new Point(0, 0);
+            pnlBullet2.Location = new System.Drawing.Point(0, 0);
             pnlBullet2.Name = "pnlBullet2";
-            pnlBullet2.Size = new Size(200, 100);
+            pnlBullet2.Size = new System.Drawing.Size(200, 100);
             pnlBullet2.TabIndex = 1;
             // 
             // pnlBullet3
             // 
-            pnlBullet3.Location = new Point(0, 0);
+            pnlBullet3.Location = new System.Drawing.Point(0, 0);
             pnlBullet3.Name = "pnlBullet3";
-            pnlBullet3.Size = new Size(200, 100);
+            pnlBullet3.Size = new System.Drawing.Size(200, 100);
             pnlBullet3.TabIndex = 2;
             // 
             // pnlBullet4
             // 
-            pnlBullet4.Location = new Point(0, 0);
+            pnlBullet4.Location = new System.Drawing.Point(0, 0);
             pnlBullet4.Name = "pnlBullet4";
-            pnlBullet4.Size = new Size(200, 100);
+            pnlBullet4.Size = new System.Drawing.Size(200, 100);
             pnlBullet4.TabIndex = 3;
             // 
             // pnlLogo
             // 
-            pnlLogo.BackColor = Color.FromArgb(30, 34, 54);
+            pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)((byte)30)), ((int)((byte)34)), ((int)((byte)54)));
             pnlLogo.Controls.Add(lblAppTitle);
             pnlLogo.Controls.Add(lblLogo);
-            pnlLogo.Dock = DockStyle.Top;
-            pnlLogo.Location = new Point(0, 0);
+            pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            pnlLogo.Location = new System.Drawing.Point(0, 0);
             pnlLogo.Name = "pnlLogo";
-            pnlLogo.Size = new Size(320, 180);
+            pnlLogo.Size = new System.Drawing.Size(320, 180);
             pnlLogo.TabIndex = 1;
             // 
             // lblAppTitle
             // 
-            lblAppTitle.Dock = DockStyle.Fill;
-            lblAppTitle.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
-            lblAppTitle.ForeColor = Color.FromArgb(99, 179, 237);
-            lblAppTitle.Location = new Point(0, 100);
+            lblAppTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblAppTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            lblAppTitle.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)99)), ((int)((byte)179)), ((int)((byte)237)));
+            lblAppTitle.Location = new System.Drawing.Point(0, 100);
             lblAppTitle.Name = "lblAppTitle";
-            lblAppTitle.Size = new Size(320, 80);
+            lblAppTitle.Size = new System.Drawing.Size(320, 80);
             lblAppTitle.TabIndex = 0;
             lblAppTitle.Text = "SecureVault";
-            lblAppTitle.TextAlign = ContentAlignment.MiddleCenter;
+            lblAppTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblLogo
             // 
-            lblLogo.Dock = DockStyle.Top;
-            lblLogo.Font = new Font("Segoe UI Emoji", 42F);
-            lblLogo.ForeColor = Color.White;
-            lblLogo.Location = new Point(0, 0);
+            lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            lblLogo.Font = new System.Drawing.Font("Segoe UI Emoji", 42F);
+            lblLogo.ForeColor = System.Drawing.Color.White;
+            lblLogo.Location = new System.Drawing.Point(0, 0);
             lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(320, 100);
+            lblLogo.Size = new System.Drawing.Size(320, 100);
             lblLogo.TabIndex = 1;
             lblLogo.Text = "🔐";
-            lblLogo.TextAlign = ContentAlignment.MiddleCenter;
+            lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBullet1Icon
             // 
-            lblBullet1Icon.Location = new Point(0, 0);
+            lblBullet1Icon.Location = new System.Drawing.Point(0, 0);
             lblBullet1Icon.Name = "lblBullet1Icon";
-            lblBullet1Icon.Size = new Size(100, 23);
+            lblBullet1Icon.Size = new System.Drawing.Size(100, 23);
             lblBullet1Icon.TabIndex = 0;
             // 
             // lblBullet1Head
             // 
-            lblBullet1Head.Location = new Point(0, 0);
+            lblBullet1Head.Location = new System.Drawing.Point(0, 0);
             lblBullet1Head.Name = "lblBullet1Head";
-            lblBullet1Head.Size = new Size(100, 23);
+            lblBullet1Head.Size = new System.Drawing.Size(100, 23);
             lblBullet1Head.TabIndex = 0;
             // 
             // lblBullet1Sub
             // 
-            lblBullet1Sub.Location = new Point(0, 0);
+            lblBullet1Sub.Location = new System.Drawing.Point(0, 0);
             lblBullet1Sub.Name = "lblBullet1Sub";
-            lblBullet1Sub.Size = new Size(100, 23);
+            lblBullet1Sub.Size = new System.Drawing.Size(100, 23);
             lblBullet1Sub.TabIndex = 0;
             // 
             // lblBullet2Icon
             // 
-            lblBullet2Icon.Location = new Point(0, 0);
+            lblBullet2Icon.Location = new System.Drawing.Point(0, 0);
             lblBullet2Icon.Name = "lblBullet2Icon";
-            lblBullet2Icon.Size = new Size(100, 23);
+            lblBullet2Icon.Size = new System.Drawing.Size(100, 23);
             lblBullet2Icon.TabIndex = 0;
             // 
             // lblBullet2Head
             // 
-            lblBullet2Head.Location = new Point(0, 0);
+            lblBullet2Head.Location = new System.Drawing.Point(0, 0);
             lblBullet2Head.Name = "lblBullet2Head";
-            lblBullet2Head.Size = new Size(100, 23);
+            lblBullet2Head.Size = new System.Drawing.Size(100, 23);
             lblBullet2Head.TabIndex = 0;
             // 
             // lblBullet2Sub
             // 
-            lblBullet2Sub.Location = new Point(0, 0);
+            lblBullet2Sub.Location = new System.Drawing.Point(0, 0);
             lblBullet2Sub.Name = "lblBullet2Sub";
-            lblBullet2Sub.Size = new Size(100, 23);
+            lblBullet2Sub.Size = new System.Drawing.Size(100, 23);
             lblBullet2Sub.TabIndex = 0;
             // 
             // lblBullet3Icon
             // 
-            lblBullet3Icon.Location = new Point(0, 0);
+            lblBullet3Icon.Location = new System.Drawing.Point(0, 0);
             lblBullet3Icon.Name = "lblBullet3Icon";
-            lblBullet3Icon.Size = new Size(100, 23);
+            lblBullet3Icon.Size = new System.Drawing.Size(100, 23);
             lblBullet3Icon.TabIndex = 0;
             // 
             // lblBullet3Head
             // 
-            lblBullet3Head.Location = new Point(0, 0);
+            lblBullet3Head.Location = new System.Drawing.Point(0, 0);
             lblBullet3Head.Name = "lblBullet3Head";
-            lblBullet3Head.Size = new Size(100, 23);
+            lblBullet3Head.Size = new System.Drawing.Size(100, 23);
             lblBullet3Head.TabIndex = 0;
             // 
             // lblBullet3Sub
             // 
-            lblBullet3Sub.Location = new Point(0, 0);
+            lblBullet3Sub.Location = new System.Drawing.Point(0, 0);
             lblBullet3Sub.Name = "lblBullet3Sub";
-            lblBullet3Sub.Size = new Size(100, 23);
+            lblBullet3Sub.Size = new System.Drawing.Size(100, 23);
             lblBullet3Sub.TabIndex = 0;
             // 
             // lblBullet4Icon
             // 
-            lblBullet4Icon.Location = new Point(0, 0);
+            lblBullet4Icon.Location = new System.Drawing.Point(0, 0);
             lblBullet4Icon.Name = "lblBullet4Icon";
-            lblBullet4Icon.Size = new Size(100, 23);
+            lblBullet4Icon.Size = new System.Drawing.Size(100, 23);
             lblBullet4Icon.TabIndex = 0;
             // 
             // lblBullet4Head
             // 
-            lblBullet4Head.Location = new Point(0, 0);
+            lblBullet4Head.Location = new System.Drawing.Point(0, 0);
             lblBullet4Head.Name = "lblBullet4Head";
-            lblBullet4Head.Size = new Size(100, 23);
+            lblBullet4Head.Size = new System.Drawing.Size(100, 23);
             lblBullet4Head.TabIndex = 0;
             // 
             // lblBullet4Sub
             // 
-            lblBullet4Sub.Location = new Point(0, 0);
+            lblBullet4Sub.Location = new System.Drawing.Point(0, 0);
             lblBullet4Sub.Name = "lblBullet4Sub";
-            lblBullet4Sub.Size = new Size(100, 23);
+            lblBullet4Sub.Size = new System.Drawing.Size(100, 23);
             lblBullet4Sub.TabIndex = 0;
             // 
             // pnlMain
             // 
-            pnlMain.BackColor = Color.FromArgb(15, 17, 26);
+            pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)((byte)15)), ((int)((byte)17)), ((int)((byte)26)));
             pnlMain.Controls.Add(tabControl);
-            pnlMain.Dock = DockStyle.Fill;
-            pnlMain.Location = new Point(320, 0);
+            pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlMain.Location = new System.Drawing.Point(320, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Padding = new Padding(40);
-            pnlMain.Size = new Size(564, 581);
+            pnlMain.Padding = new System.Windows.Forms.Padding(40);
+            pnlMain.Size = new System.Drawing.Size(558, 564);
             pnlMain.TabIndex = 0;
             // 
             // tabControl
             // 
-            tabControl.Appearance = TabAppearance.FlatButtons;
+            tabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             tabControl.Controls.Add(tabLogin);
             tabControl.Controls.Add(tabRegister);
-            tabControl.Dock = DockStyle.Fill;
-            tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
-            tabControl.Font = new Font("Segoe UI", 10F);
-            tabControl.ItemSize = new Size(130, 36);
-            tabControl.Location = new Point(40, 40);
+            tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            tabControl.Font = new System.Drawing.Font("Segoe UI", 10F);
+            tabControl.ItemSize = new System.Drawing.Size(130, 36);
+            tabControl.Location = new System.Drawing.Point(40, 40);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(484, 501);
+            tabControl.Size = new System.Drawing.Size(478, 484);
             tabControl.TabIndex = 0;
             tabControl.DrawItem += tabControl_DrawItem;
             // 
             // tabLogin
             // 
-            tabLogin.BackColor = Color.FromArgb(15, 17, 26);
+            tabLogin.BackColor = System.Drawing.Color.FromArgb(((int)((byte)15)), ((int)((byte)17)), ((int)((byte)26)));
             tabLogin.Controls.Add(pnlLoginInner);
-            tabLogin.Location = new Point(4, 40);
+            tabLogin.Location = new System.Drawing.Point(4, 40);
             tabLogin.Name = "tabLogin";
-            tabLogin.Size = new Size(476, 457);
+            tabLogin.Size = new System.Drawing.Size(470, 440);
             tabLogin.TabIndex = 0;
             tabLogin.Text = "  Sign In  ";
             // 
@@ -300,98 +304,108 @@
             pnlLoginInner.Controls.Add(lblLoginError);
             pnlLoginInner.Controls.Add(btnLogin);
             pnlLoginInner.Controls.Add(lblLoginHint);
-            pnlLoginInner.Dock = DockStyle.Fill;
-            pnlLoginInner.Location = new Point(0, 0);
+            pnlLoginInner.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlLoginInner.Location = new System.Drawing.Point(0, 0);
             pnlLoginInner.Name = "pnlLoginInner";
-            pnlLoginInner.Padding = new Padding(30, 20, 30, 20);
-            pnlLoginInner.Size = new Size(476, 457);
+            pnlLoginInner.Padding = new System.Windows.Forms.Padding(30, 20, 30, 20);
+            pnlLoginInner.Size = new System.Drawing.Size(470, 440);
             pnlLoginInner.TabIndex = 0;
+            // 
+            // btnEye
+            // 
+            btnEye.Image = ((System.Drawing.Image)resources.GetObject("btnEye.Image"));
+            btnEye.Location = new System.Drawing.Point(386, 178);
+            btnEye.Name = "btnEye";
+            btnEye.Size = new System.Drawing.Size(26, 27);
+            btnEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            btnEye.TabIndex = 9;
+            btnEye.TabStop = false;
             // 
             // lblLoginTitle
             // 
-            lblLoginTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblLoginTitle.ForeColor = Color.White;
-            lblLoginTitle.Location = new Point(0, 0);
+            lblLoginTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            lblLoginTitle.ForeColor = System.Drawing.Color.White;
+            lblLoginTitle.Location = new System.Drawing.Point(0, 0);
             lblLoginTitle.Name = "lblLoginTitle";
-            lblLoginTitle.Size = new Size(500, 34);
+            lblLoginTitle.Size = new System.Drawing.Size(500, 34);
             lblLoginTitle.TabIndex = 0;
             lblLoginTitle.Text = "Welcome back";
             // 
             // lblLoginSub
             // 
-            lblLoginSub.Font = new Font("Segoe UI", 9F);
-            lblLoginSub.ForeColor = Color.FromArgb(110, 125, 160);
-            lblLoginSub.Location = new Point(0, 38);
+            lblLoginSub.Font = new System.Drawing.Font("Segoe UI", 9F);
+            lblLoginSub.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)110)), ((int)((byte)125)), ((int)((byte)160)));
+            lblLoginSub.Location = new System.Drawing.Point(0, 38);
             lblLoginSub.Name = "lblLoginSub";
-            lblLoginSub.Size = new Size(500, 20);
+            lblLoginSub.Size = new System.Drawing.Size(500, 20);
             lblLoginSub.TabIndex = 1;
             lblLoginSub.Text = "Sign in to access your encrypted vault";
             // 
             // lblLoginUsername
             // 
-            lblLoginUsername.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblLoginUsername.ForeColor = Color.FromArgb(160, 175, 200);
-            lblLoginUsername.Location = new Point(0, 90);
+            lblLoginUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            lblLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)160)), ((int)((byte)175)), ((int)((byte)200)));
+            lblLoginUsername.Location = new System.Drawing.Point(0, 90);
             lblLoginUsername.Name = "lblLoginUsername";
-            lblLoginUsername.Size = new Size(200, 20);
+            lblLoginUsername.Size = new System.Drawing.Size(200, 20);
             lblLoginUsername.TabIndex = 2;
             lblLoginUsername.Text = "Username";
             // 
             // txtLoginUsername
             // 
-            txtLoginUsername.BackColor = Color.FromArgb(28, 32, 50);
-            txtLoginUsername.BorderStyle = BorderStyle.FixedSingle;
-            txtLoginUsername.Font = new Font("Segoe UI", 11F);
-            txtLoginUsername.ForeColor = Color.FromArgb(200, 210, 230);
-            txtLoginUsername.Location = new Point(0, 112);
+            txtLoginUsername.BackColor = System.Drawing.Color.FromArgb(((int)((byte)28)), ((int)((byte)32)), ((int)((byte)50)));
+            txtLoginUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            txtLoginUsername.Font = new System.Drawing.Font("Segoe UI", 11F);
+            txtLoginUsername.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)200)), ((int)((byte)210)), ((int)((byte)230)));
+            txtLoginUsername.Location = new System.Drawing.Point(0, 112);
             txtLoginUsername.Name = "txtLoginUsername";
             txtLoginUsername.PlaceholderText = "Enter your username";
-            txtLoginUsername.Size = new Size(380, 27);
+            txtLoginUsername.Size = new System.Drawing.Size(380, 37);
             txtLoginUsername.TabIndex = 3;
             // 
             // lblLoginPassword
             // 
-            lblLoginPassword.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblLoginPassword.ForeColor = Color.FromArgb(160, 175, 200);
-            lblLoginPassword.Location = new Point(0, 156);
+            lblLoginPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            lblLoginPassword.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)160)), ((int)((byte)175)), ((int)((byte)200)));
+            lblLoginPassword.Location = new System.Drawing.Point(0, 156);
             lblLoginPassword.Name = "lblLoginPassword";
-            lblLoginPassword.Size = new Size(200, 20);
+            lblLoginPassword.Size = new System.Drawing.Size(200, 20);
             lblLoginPassword.TabIndex = 4;
             lblLoginPassword.Text = "Password";
             // 
             // txtLoginPassword
             // 
-            txtLoginPassword.BackColor = Color.FromArgb(28, 32, 50);
-            txtLoginPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtLoginPassword.Font = new Font("Segoe UI", 11F);
-            txtLoginPassword.ForeColor = Color.FromArgb(200, 210, 230);
-            txtLoginPassword.Location = new Point(0, 178);
+            txtLoginPassword.BackColor = System.Drawing.Color.FromArgb(((int)((byte)28)), ((int)((byte)32)), ((int)((byte)50)));
+            txtLoginPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            txtLoginPassword.Font = new System.Drawing.Font("Segoe UI", 11F);
+            txtLoginPassword.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)200)), ((int)((byte)210)), ((int)((byte)230)));
+            txtLoginPassword.Location = new System.Drawing.Point(0, 178);
             txtLoginPassword.Name = "txtLoginPassword";
             txtLoginPassword.PlaceholderText = "Enter your password";
-            txtLoginPassword.Size = new Size(380, 27);
+            txtLoginPassword.Size = new System.Drawing.Size(380, 37);
             txtLoginPassword.TabIndex = 5;
             txtLoginPassword.UseSystemPasswordChar = true;
             // 
             // lblLoginError
             // 
-            lblLoginError.Font = new Font("Segoe UI", 8.5F);
-            lblLoginError.ForeColor = Color.FromArgb(245, 101, 101);
-            lblLoginError.Location = new Point(0, 224);
+            lblLoginError.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            lblLoginError.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)245)), ((int)((byte)101)), ((int)((byte)101)));
+            lblLoginError.Location = new System.Drawing.Point(0, 224);
             lblLoginError.Name = "lblLoginError";
-            lblLoginError.Size = new Size(500, 20);
+            lblLoginError.Size = new System.Drawing.Size(500, 20);
             lblLoginError.TabIndex = 6;
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.FromArgb(99, 179, 237);
-            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)((byte)99)), ((int)((byte)179)), ((int)((byte)237)));
+            btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnLogin.ForeColor = Color.FromArgb(15, 17, 26);
-            btnLogin.Location = new Point(0, 252);
+            btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)15)), ((int)((byte)17)), ((int)((byte)26)));
+            btnLogin.Location = new System.Drawing.Point(0, 252);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(180, 44);
+            btnLogin.Size = new System.Drawing.Size(180, 44);
             btnLogin.TabIndex = 7;
             btnLogin.Text = "Sign In  →";
             btnLogin.UseVisualStyleBackColor = false;
@@ -399,21 +413,21 @@
             // 
             // lblLoginHint
             // 
-            lblLoginHint.Font = new Font("Segoe UI", 8.5F);
-            lblLoginHint.ForeColor = Color.FromArgb(110, 125, 160);
-            lblLoginHint.Location = new Point(0, 312);
+            lblLoginHint.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            lblLoginHint.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)110)), ((int)((byte)125)), ((int)((byte)160)));
+            lblLoginHint.Location = new System.Drawing.Point(0, 312);
             lblLoginHint.Name = "lblLoginHint";
-            lblLoginHint.Size = new Size(400, 20);
+            lblLoginHint.Size = new System.Drawing.Size(400, 20);
             lblLoginHint.TabIndex = 8;
-            lblLoginHint.Text = "Don't have an account? Click 'Register' above.";
+            lblLoginHint.Text = "Don\'t have an account? Click \'Register\' above.";
             // 
             // tabRegister
             // 
-            tabRegister.BackColor = Color.FromArgb(15, 17, 26);
+            tabRegister.BackColor = System.Drawing.Color.FromArgb(((int)((byte)15)), ((int)((byte)17)), ((int)((byte)26)));
             tabRegister.Controls.Add(pnlRegInner);
-            tabRegister.Location = new Point(4, 40);
+            tabRegister.Location = new System.Drawing.Point(4, 40);
             tabRegister.Name = "tabRegister";
-            tabRegister.Size = tabLogin.Size;
+            tabRegister.Size = new System.Drawing.Size(476, 457);
             tabRegister.TabIndex = 1;
             tabRegister.Text = "  Register  ";
             // 
@@ -432,145 +446,135 @@
             pnlRegInner.Controls.Add(lblRegError);
             pnlRegInner.Controls.Add(lblRegSuccess);
             pnlRegInner.Controls.Add(btnRegister);
-            pnlRegInner.Dock = DockStyle.Fill;
-            pnlRegInner.Location = new Point(0, 0);
+            pnlRegInner.Dock = System.Windows.Forms.DockStyle.Fill;
+            pnlRegInner.Location = new System.Drawing.Point(0, 0);
             pnlRegInner.Name = "pnlRegInner";
-            pnlRegInner.Padding = new Padding(30, 10, 30, 10);
-            pnlRegInner.Size = pnlLoginInner.Size;
+            pnlRegInner.Padding = new System.Windows.Forms.Padding(30, 10, 30, 10);
+            pnlRegInner.Size = new System.Drawing.Size(476, 457);
             pnlRegInner.TabIndex = 0;
             // 
             // lblRegTitle
             // 
-            lblRegTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblRegTitle.ForeColor = Color.White;
-            lblRegTitle.Location = new Point(0, 0);
+            lblRegTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            lblRegTitle.ForeColor = System.Drawing.Color.White;
+            lblRegTitle.Location = new System.Drawing.Point(0, 0);
             lblRegTitle.Name = "lblRegTitle";
-            lblRegTitle.Size = new Size(500, 34);
+            lblRegTitle.Size = new System.Drawing.Size(500, 34);
             lblRegTitle.TabIndex = 0;
             lblRegTitle.Text = "Create account";
             // 
             // lblRegSub
             // 
-            lblRegSub.Font = new Font("Segoe UI", 9F);
-            lblRegSub.ForeColor = Color.FromArgb(110, 125, 160);
-            lblRegSub.Location = new Point(0, 36);
+            lblRegSub.Font = new System.Drawing.Font("Segoe UI", 9F);
+            lblRegSub.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)110)), ((int)((byte)125)), ((int)((byte)160)));
+            lblRegSub.Location = new System.Drawing.Point(0, 36);
             lblRegSub.Name = "lblRegSub";
-            lblRegSub.Size = new Size(500, 20);
+            lblRegSub.Size = new System.Drawing.Size(500, 20);
             lblRegSub.TabIndex = 1;
             lblRegSub.Text = "Your files will be encrypted before storage";
             // 
             // lblRegUsername
             // 
-            lblRegUsername.Location = new Point(0, 0);
+            lblRegUsername.Location = new System.Drawing.Point(0, 0);
             lblRegUsername.Name = "lblRegUsername";
-            lblRegUsername.Size = new Size(100, 23);
+            lblRegUsername.Size = new System.Drawing.Size(100, 23);
             lblRegUsername.TabIndex = 2;
             // 
             // txtRegUsername
             // 
-            txtRegUsername.Location = new Point(0, 0);
+            txtRegUsername.Location = new System.Drawing.Point(0, 0);
             txtRegUsername.Name = "txtRegUsername";
-            txtRegUsername.Size = new Size(100, 25);
+            txtRegUsername.Size = new System.Drawing.Size(100, 34);
             txtRegUsername.TabIndex = 3;
             // 
             // lblRegEmail
             // 
-            lblRegEmail.Location = new Point(0, 0);
+            lblRegEmail.Location = new System.Drawing.Point(0, 0);
             lblRegEmail.Name = "lblRegEmail";
-            lblRegEmail.Size = new Size(100, 23);
+            lblRegEmail.Size = new System.Drawing.Size(100, 23);
             lblRegEmail.TabIndex = 4;
             // 
             // txtRegEmail
             // 
-            txtRegEmail.Location = new Point(0, 0);
+            txtRegEmail.Location = new System.Drawing.Point(0, 0);
             txtRegEmail.Name = "txtRegEmail";
-            txtRegEmail.Size = new Size(100, 25);
+            txtRegEmail.Size = new System.Drawing.Size(100, 34);
             txtRegEmail.TabIndex = 5;
             // 
             // lblRegPassword
             // 
-            lblRegPassword.Location = new Point(0, 0);
+            lblRegPassword.Location = new System.Drawing.Point(0, 0);
             lblRegPassword.Name = "lblRegPassword";
-            lblRegPassword.Size = new Size(100, 23);
+            lblRegPassword.Size = new System.Drawing.Size(100, 23);
             lblRegPassword.TabIndex = 6;
             // 
             // txtRegPassword
             // 
-            txtRegPassword.Location = new Point(0, 0);
+            txtRegPassword.Location = new System.Drawing.Point(0, 0);
             txtRegPassword.Name = "txtRegPassword";
-            txtRegPassword.Size = new Size(100, 25);
+            txtRegPassword.Size = new System.Drawing.Size(100, 34);
             txtRegPassword.TabIndex = 7;
             // 
             // lblRegConfirm
             // 
-            lblRegConfirm.Location = new Point(0, 0);
+            lblRegConfirm.Location = new System.Drawing.Point(0, 0);
             lblRegConfirm.Name = "lblRegConfirm";
-            lblRegConfirm.Size = new Size(100, 23);
+            lblRegConfirm.Size = new System.Drawing.Size(100, 23);
             lblRegConfirm.TabIndex = 8;
             // 
             // txtRegConfirm
             // 
-            txtRegConfirm.Location = new Point(0, 0);
+            txtRegConfirm.Location = new System.Drawing.Point(0, 0);
             txtRegConfirm.Name = "txtRegConfirm";
-            txtRegConfirm.Size = new Size(100, 25);
+            txtRegConfirm.Size = new System.Drawing.Size(100, 34);
             txtRegConfirm.TabIndex = 9;
             // 
             // lblRegError
             // 
-            lblRegError.Font = new Font("Segoe UI", 8.5F);
-            lblRegError.ForeColor = Color.FromArgb(245, 101, 101);
-            lblRegError.Location = new Point(0, 310);
+            lblRegError.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            lblRegError.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)245)), ((int)((byte)101)), ((int)((byte)101)));
+            lblRegError.Location = new System.Drawing.Point(0, 310);
             lblRegError.Name = "lblRegError";
-            lblRegError.Size = new Size(500, 20);
+            lblRegError.Size = new System.Drawing.Size(500, 20);
             lblRegError.TabIndex = 10;
             // 
             // lblRegSuccess
             // 
-            lblRegSuccess.Font = new Font("Segoe UI", 8.5F);
-            lblRegSuccess.ForeColor = Color.FromArgb(72, 199, 142);
-            lblRegSuccess.Location = new Point(0, 310);
+            lblRegSuccess.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            lblRegSuccess.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)72)), ((int)((byte)199)), ((int)((byte)142)));
+            lblRegSuccess.Location = new System.Drawing.Point(0, 310);
             lblRegSuccess.Name = "lblRegSuccess";
-            lblRegSuccess.Size = new Size(500, 20);
+            lblRegSuccess.Size = new System.Drawing.Size(500, 20);
             lblRegSuccess.TabIndex = 11;
             // 
             // btnRegister
             // 
-            btnRegister.BackColor = Color.FromArgb(72, 199, 142);
-            btnRegister.Cursor = Cursors.Hand;
+            btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)((byte)72)), ((int)((byte)199)), ((int)((byte)142)));
+            btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             btnRegister.FlatAppearance.BorderSize = 0;
-            btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnRegister.ForeColor = Color.FromArgb(15, 17, 26);
-            btnRegister.Location = new Point(0, 336);
+            btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnRegister.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)((byte)15)), ((int)((byte)17)), ((int)((byte)26)));
+            btnRegister.Location = new System.Drawing.Point(0, 336);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(200, 44);
+            btnRegister.Size = new System.Drawing.Size(200, 44);
             btnRegister.TabIndex = 12;
             btnRegister.Text = "Create Account  →";
             btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
             // 
-            // btnEye
-            // 
-            btnEye.Image = (Image)resources.GetObject("btnEye.Image");
-            btnEye.Location = new Point(386, 178);
-            btnEye.Name = "btnEye";
-            btnEye.Size = new Size(26, 27);
-            btnEye.SizeMode = PictureBoxSizeMode.Zoom;
-            btnEye.TabIndex = 9;
-            btnEye.TabStop = false;
-            // 
             // LoginForm
             // 
-            BackColor = Color.FromArgb(15, 17, 26);
-            ClientSize = new Size(884, 581);
+            BackColor = System.Drawing.Color.FromArgb(((int)((byte)15)), ((int)((byte)17)), ((int)((byte)26)));
+            ClientSize = new System.Drawing.Size(878, 564);
             Controls.Add(pnlMain);
             Controls.Add(pnlSide);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = ((System.Drawing.Icon)resources.GetObject("$this.Icon"));
             MaximizeBox = false;
-            MaximumSize = new Size(900, 620);
-            MinimumSize = new Size(900, 620);
-            Name = "LoginForm";
-            StartPosition = FormStartPosition.CenterScreen;
+            MaximumSize = new System.Drawing.Size(900, 620);
+            MinimumSize = new System.Drawing.Size(900, 620);
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "SecureVault — Secure File Storage";
             pnlSide.ResumeLayout(false);
             pnlBullets.ResumeLayout(false);
@@ -580,10 +584,10 @@
             tabLogin.ResumeLayout(false);
             pnlLoginInner.ResumeLayout(false);
             pnlLoginInner.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEye).EndInit();
             tabRegister.ResumeLayout(false);
             pnlRegInner.ResumeLayout(false);
             pnlRegInner.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnEye).EndInit();
             ResumeLayout(false);
         }
 
